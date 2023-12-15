@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <h2>Users List</h2>
+  <ul class="list-group">
+    <li *ngFor="let user of users | async"
+        (click)="selectUser(user)"
+        class="list-group-item cursor-pointer rounded-0 user-item">
+      {{ user }}
+    </li>
+  </ul>
+  <div class="mt-2">
+    <app-user-details [user]="selectedUser"></app-user-details>
+  </div>
+</div>
