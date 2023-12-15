@@ -1,0 +1,14 @@
+<div class="mt-4">
+  <h3>New User</h3>
+  <div class="input-group">
+    <input [ngModel]="newUser"
+           (input)="onInputChange($event)"
+           (keydown.enter)="addUser()"
+           placeholder="New User"
+           class="form-control" />
+
+    <div class="input-group-append">
+      <button (click)="addUser()" class="btn btn-primary rounded-0">Add User</button>
+    </div>
+  </div>
+</div>
